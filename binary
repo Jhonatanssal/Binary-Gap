@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+def binaryConvert(number)
+  number.to_s(2)
+end
+
+def splitZeros(string)
+  arr = string.split(/1+/)
+  if arr.length > 0
+    arr.map{ |element| element.length }.max
+  else
+    0
+  end
+end
+
+puts 'Enter a number: '
+number = gets.chomp.to_i
+
+p 'The number converted to binary is:'
+p binaryConvert(number)
+p 'The binary gap is:'
+p splitZeros(binaryConvert(number))
