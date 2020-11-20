@@ -31,6 +31,7 @@ const window = () => {
     const bin = binary(Number(input1.value));
     binary1.textContent = bin;
     binary2.textContent = zerosGap(bin);
+    form.reset();
   });
 
   form.appendChild(input1);
