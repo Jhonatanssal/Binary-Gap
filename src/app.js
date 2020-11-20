@@ -25,12 +25,11 @@ const window = () => {
   input1.type = 'text';
   input2.type = 'submit';
 
-
   input2.addEventListener('click', (e) => {
     e.preventDefault();
-    const bin = binary(Number(input1.value));
-    binary1.textContent = bin;
-    binary2.textContent = zerosGap(bin);
+    const value = Number(input1.value);
+    binary1.textContent = binary(value);
+    binary2.textContent = zerosGap(value);
     form.reset();
   });
 
